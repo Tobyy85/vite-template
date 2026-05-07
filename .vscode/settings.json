@@ -53,6 +53,13 @@
 
     // Tailwind CSS
     "tailwindCSS.emmetCompletions": true,
+    "tailwindCSS.classFunctions": ["cn", "twMerge", "clsx"],
+    "tailwindCSS.experimental.classRegex": [
+        ["\\bvariants\\s*=\\s*\\{([\\s\\S]*?)\\}", "'([^']*)'"], // For variants as object
+        ["\\bsizes\\s*=\\s*\\{([\\s\\S]*?)\\}", "'([^']*)'"], // For sizes as object
+        ["\\bbaseStyles\\s*=\\s*'([^']*)'"], // For baseStyles as string
+        ["\\bbaseStyles\\s*=\\s*\\[([\\s\\S]*?)\\]", "'([^']*)'"] // For baseStyles as array
+    ],
     "editor.quickSuggestions": {
         "strings": true
     },
