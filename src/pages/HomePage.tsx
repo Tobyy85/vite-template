@@ -1,8 +1,8 @@
-const HomeRoute = () => {
+const HomePage = () => {
     return (
         <>
             <h1>HomePage</h1>
         </>
     )
 }
-export default HomeRoute
+export default HomePage

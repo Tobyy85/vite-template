@@ -1,10 +1,10 @@
-import HomeRoute from '@/routes/Home'
-import NotFoundRoute from '@/routes/NotFound'
+import ErrorPage from '@/pages/ErrorPage'
+import HomePage from '@/pages/HomePage'
 
 export const routes = [
     {
         path: '/',
-        element: <HomeRoute />,
-        errorElement: <NotFoundRoute />,
+        element: <HomePage />,
+        errorElement: <ErrorPage />,
     },
 ]
