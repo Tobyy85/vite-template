@@ -278,7 +278,7 @@ export default defineConfig([
             '@typescript-eslint/no-useless-constructor': 'warn',
 
             'no-throw-literal': 'off',
-            '@typescript-eslint/only-throw-error': 'warn',
+            '@typescript-eslint/only-throw-error': ['warn', { allow: ['Response'] }],
 
             'prefer-destructuring': 'off',
             '@typescript-eslint/prefer-destructuring': ['warn', { object: true, array: false }],
@@ -384,7 +384,6 @@ export default defineConfig([
             '@typescript-eslint/no-unnecessary-qualifier': 'warn',
             '@typescript-eslint/no-unnecessary-template-expression': 'warn',
             '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-            '@typescript-eslint/no-unnecessary-type-arguments': 'off', // TODO: Enable this rule once newer version of TypeScript eslint plugin is released that fix the crash
             '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
             '@typescript-eslint/no-unnecessary-type-conversion': 'warn',
             '@typescript-eslint/no-unnecessary-type-parameters': 'warn',
