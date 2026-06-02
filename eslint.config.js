@@ -10,12 +10,8 @@ import tseslint from 'typescript-eslint'
 export default defineConfig([
     globalIgnores(['dist', 'node_modules']),
     {
-        files: ['**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'],
-        extends: [
-            js.configs.recommended,
-            reactHooks.configs.flat['recommended-latest'],
-            reactRefresh.configs.vite,
-        ],
+        files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
+        extends: [js.configs.recommended],
         languageOptions: {
             ecmaVersion: 2020,
             globals: globals.browser,
@@ -152,8 +148,6 @@ export default defineConfig([
             'symbol-description': 'warn',
             'vars-on-top': 'warn',
             yoda: ['warn', 'never', { exceptRange: true }],
-
-            'react-hooks/set-state-in-effect': 'off',
         },
     },
     {
@@ -431,9 +425,11 @@ export default defineConfig([
         },
     },
     {
-        files: ['**/*.{tsx,jsx}'],
+        files: ['**/*.{jsx,tsx}'],
+        extends: [reactHooks.configs.flat['recommended-latest'], reactRefresh.configs.vite],
         rules: {
-            'max-lines-per-function': ['warn', { max: 120, skipBlankLines: true, skipComments: true }], // JSX functions can be longer
+            'react-hooks/set-state-in-effect': 'off',
+            'max-lines-per-function': ['warn', { max: 120, skipBlankLines: true, skipComments: true }],
         },
     },
     {
