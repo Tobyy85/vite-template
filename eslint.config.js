@@ -1,7 +1,7 @@
 /* eslint-disable max-lines, id-length, no-magic-numbers */
 
+import eslintReact from '@eslint-react/eslint-plugin'
 import js from '@eslint/js'
-import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
@@ -425,10 +425,13 @@ export default defineConfig([
         },
     },
     {
+        files: ['**/*.{tsx,ts,jsx,js}'],
+        extends: [eslintReact.configs['recommended-typescript']],
+    },
+    {
         files: ['**/*.{jsx,tsx}'],
-        extends: [reactHooks.configs.flat['recommended-latest'], reactRefresh.configs.vite],
+        extends: [reactRefresh.configs.vite],
         rules: {
-            'react-hooks/set-state-in-effect': 'off',
             'max-lines-per-function': ['warn', { max: 120, skipBlankLines: true, skipComments: true }],
         },
     },
