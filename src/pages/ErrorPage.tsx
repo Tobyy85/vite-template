@@ -1,6 +1,8 @@
-import { Link, useRouteError } from 'react-router-dom'
+import { Link, useNavigate, useRouteError } from 'react-router-dom'
 
 const ErrorPage = () => {
+    const navigate = useNavigate()
+
     // eslint-disable-next-line @typescript-eslint/no-unsafe-type-assertion
     const error = useRouteError() as { status?: number } | undefined
 
@@ -19,6 +21,14 @@ const ErrorPage = () => {
         message = 'The service is currently unavailable. Please try again later.'
     }
 
+    const handleGoBack = () => {
+        if (window.history.length > 2) {
+            void navigate(-1)
+        } else {
+            void navigate('/')
+        }
+    }
+
     return (
         <div className='absolute top-1/2 left-1/2 w-full -translate-1/2'>
             <div className='flex flex-col items-center justify-center text-center'>
@@ -33,7 +43,7 @@ const ErrorPage = () => {
                         Home
                     </Link>
                     <button
-                        onClick={() => window.history.back()}
+                        onClick={handleGoBack}
                         className='cursor-pointer rounded-lg bg-neutral-800 px-4 py-2 font-medium
                             text-neutral-100 transition-colors hover:bg-neutral-700 active:scale-[.98]'
                     >
