@@ -4,7 +4,7 @@
     "bracketSameLine": false,
     "bracketSpacing": true,
     "embeddedLanguageFormatting": "auto",
-    "endOfLine": "lf",
+    "endOfLine": "auto",
     "experimentalTernaries": false,
     "htmlWhitespaceSensitivity": "css",
     "insertPragma": false,
