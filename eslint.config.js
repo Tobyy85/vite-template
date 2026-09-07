@@ -3,6 +3,7 @@
 import eslintReact from '@eslint-react/eslint-plugin'
 import js from '@eslint/js'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import eslintPluginTailwindcss from 'eslint-plugin-tailwindcss'
 import { defineConfig, globalIgnores } from 'eslint/config'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
@@ -10,6 +11,7 @@ import tseslint from 'typescript-eslint'
 export default defineConfig([
     globalIgnores(['dist', 'node_modules']),
     {
+        /* JavaScript (base) eslint */
         files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
         extends: [js.configs.recommended],
         languageOptions: {
@@ -151,6 +153,7 @@ export default defineConfig([
         },
     },
     {
+        /* TypeScript eslint */
         files: ['**/*.{ts,tsx,mts,cts}'],
         extends: [tseslint.configs.recommended],
         languageOptions: {
@@ -425,6 +428,7 @@ export default defineConfig([
         },
     },
     {
+        /* React eslint */
         files: ['**/*.{tsx,ts,jsx,js}'],
         extends: [eslintReact.configs['recommended-typescript']],
         rules: {
@@ -498,6 +502,17 @@ export default defineConfig([
             '@eslint-react/naming-convention-context-name': 'warn',
             '@eslint-react/naming-convention-id-name': 'warn',
             '@eslint-react/naming-convention-ref-name': 'warn',
+        },
+    },
+    {
+        /* Tailwindcss eslint */
+        files: ['**/*.{js,jsx,ts,tsx}'],
+        extends: [eslintPluginTailwindcss.configs.recommended],
+        settings: {
+            tailwindcss: /** @type {import('eslint-plugin-tailwindcss').PluginSettings} */ ({
+                cssConfigPath: './src/styles/global.css',
+                functions: ['cn'],
+            }),
         },
     },
     {
