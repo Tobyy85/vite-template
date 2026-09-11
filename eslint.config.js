@@ -1,4 +1,5 @@
 import base from './eslint/base.js'
+import perfectionist from './eslint/perfectionist.js'
 import react from './eslint/react.js'
 import tailwind from './eslint/tailwind.js'
 import typescript from './eslint/typescript.js'
@@ -11,4 +12,5 @@ export default defineConfig([
     ...typescript,
     ...react,
     ...tailwind,
+    ...perfectionist,
 ])
