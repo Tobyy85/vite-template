@@ -1,3 +1,5 @@
+/* eslint-disable perfectionist/sort-objects */
+
 import perfectionist from 'eslint-plugin-perfectionist'
 
 const customGroups = {

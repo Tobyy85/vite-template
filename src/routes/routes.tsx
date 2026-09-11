@@ -1,7 +1,7 @@
-import type { RouteObject } from 'react-router-dom'
-
 import ErrorPage from '@/pages/ErrorPage'
 import HomePage from '@/pages/HomePage'
+
+import type { RouteObject } from 'react-router-dom'
 
 export const routes: RouteObject[] = [
     {

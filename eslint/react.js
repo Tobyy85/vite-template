@@ -1,3 +1,5 @@
+/* eslint-disable perfectionist/sort-objects */
+
 import eslintReact from '@eslint-react/eslint-plugin'
 import reactRefresh from 'eslint-plugin-react-refresh'
 

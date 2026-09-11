@@ -1,4 +1,5 @@
-/* eslint-disable id-length */
+/* eslint-disable id-length, perfectionist/sort-objects */
+
 import tseslint from 'typescript-eslint'
 
 export default [

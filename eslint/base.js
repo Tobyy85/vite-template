@@ -1,4 +1,4 @@
-/* eslint-disable no-magic-numbers */
+/* eslint-disable no-magic-numbers, perfectionist/sort-objects */
 
 import js from '@eslint/js'
 import globals from 'globals'

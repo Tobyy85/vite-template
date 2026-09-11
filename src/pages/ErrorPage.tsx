@@ -36,16 +36,16 @@ const ErrorPage = () => {
                 <p className='mt-2 text-xl text-neutral-300'>{message}</p>
                 <div className='mt-6 flex items-center gap-4'>
                     <Link
-                        to='/'
                         className='cursor-pointer rounded-lg bg-neutral-100 px-4 py-2 font-medium
                             text-neutral-900 transition-colors hover:bg-neutral-200 active:scale-[.98]'
+                        to='/'
                     >
                         Home
                     </Link>
                     <button
-                        onClick={handleGoBack}
                         className='cursor-pointer rounded-lg bg-neutral-800 px-4 py-2 font-medium
                             text-neutral-100 transition-colors hover:bg-neutral-700 active:scale-[.98]'
+                        onClick={handleGoBack}
                     >
                         Back
                     </button>
