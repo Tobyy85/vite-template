@@ -7,7 +7,7 @@ import tailwind from './eslint/tailwind.js'
 import typescript from './eslint/typescript.js'
 
 export default defineConfig([
-    globalIgnores(['dist', 'node_modules']),
+    globalIgnores(['dist', 'node_modules', 'coverage', 'public', 'build', 'vite.config.ts']),
     ...base,
     ...typescript,
     ...react,
