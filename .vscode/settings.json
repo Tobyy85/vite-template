@@ -57,8 +57,9 @@
     "tailwindCSS.experimental.classRegex": [
         ["\\bvariants\\s*=\\s*\\{([\\s\\S]*?)\\}", "'([^']*)'"], // For variants as object
         ["\\bsizes\\s*=\\s*\\{([\\s\\S]*?)\\}", "'([^']*)'"], // For sizes as object
-        ["\\bbaseStyles\\s*=\\s*'([^']*)'"], // For baseStyles as string
-        ["\\bbaseStyles\\s*=\\s*\\[([\\s\\S]*?)\\]", "'([^']*)'"] // For baseStyles as array
+        ["\\b\\w*[Ss]tyles\\w*\\s*=\\s*'([^']*)'"], // For styles as string
+        ["\\b\\w*[Ss]tyles\\w*\\s*=\\s*\\[([\\s\\S]*?)\\]", "'([^']*)'"], // For styles as array
+        ["\\b\\w*ClassName\\w*\\s*=\\s*'([^']*)'"] // For *ClassName as string
     ],
     "editor.quickSuggestions": {
         "strings": true
