@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-import { routes } from './routes'
+import { routes } from '@/routes/routes'
 
 const createAppRouter = () => createBrowserRouter(routes, { basename: import.meta.env.BASE_URL || '/' })
 
